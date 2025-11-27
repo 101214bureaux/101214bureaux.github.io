@@ -1,0 +1,338 @@
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  background: radial-gradient(circle, rgba(48,155,42,1) 0%, rgba(199,109,87,1) 0%, rgba(237,221,83,1) 100%);
+  color: #eee; 
+} 
+
+header { 
+  background-color: #141313; 
+  padding: 25px 40px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+} 
+
+
+header .logo {
+  display: block;
+  height: 70px;
+  width: auto;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+header nav a:hover {
+  color: #66c0f4;
+}
+
+header nav a.active {
+  color: #FF8A00;
+  border-bottom: 2px solid #FF8A00;
+}
+
+
+.banner {
+  text-align: center;
+  background: linear-gradient(180deg, #1b2838 0%, #111 100%);
+  color: #fff;
+  padding: 40px 20px 60px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.banner h2 {
+  color: #FF8A00;
+  margin-bottom: 20px;
+}
+
+.slider {
+  position: relative;
+  max-width: 900px;
+  height: 420px; 
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+
+.slide img {
+  width: 900px;
+  height: 420px; 
+  object-fit: cover; 
+  border-radius: 12px;
+  display: block;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.slide-caption h3 {
+  margin: 0;
+  color: #FF8A00;
+  font-size: 1.4em;
+}
+
+.slide-caption p {
+  margin-top: 5px;
+  color: #ddd;
+  font-size: 0.95em;
+}
+
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.6);
+  border: none;
+  color: #66c0f4;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s;
+  z-index: 10;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255,255,255,0.15);
+  transform: scale(1.1);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+.category-title {
+  margin-bottom: 20px;
+  color: #1b2838;
+  font-size: 1.8em;
+  text-align: left;        
+  padding-left: 20px;      
+}
+
+.featured-games {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+.games-list {
+  display: flex;
+  flex-wrap: wrap;      
+  gap: 20px;       
+  justify-content: center;
+}
+
+.game-card {
+  background-color: #2a475e;
+  border-radius: 8px;
+  width: 200px;    
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(102,192,244,0.5);
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.game-card .game-info {
+  padding: 10px;
+}
+
+.game-title {
+  font-size: 1.0em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #FF8A00;
+}
+
+.game-category {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #FF8A00;
+}
+
+
+footer { 
+  background-color: #1b2838; 
+  padding: 20px; 
+  text-align: center; 
+  color: #777; 
+  margin-top: 40px; 
+}
+
+.sub-banner {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #A8A7A7;
+  color: #333;
+  padding: 10px 30px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bbb;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+
+.sub-banner-links {
+  display: flex;
+  gap: 25px; 
+  margin-right: 40px; 
+}
+
+.sub-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.sub-link:hover {
+  color: #000;
+}
+
+
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.4);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.menu-title {
+  margin-top: 60px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FF8A00;
+  border-bottom: 2px solid #FF8A00;
+  padding-bottom: 5px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-list li {
+  margin-bottom: 12px;
+}
+
+.category-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.category-list li a:hover {
+  color: #FF8A00;
+}
+
+.close-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#action, #aventure, #simulation, #rythme, #visualnovel, #course, #multijoueur, #horreur{
+  scroll-margin-top: 50px;
+}
+
+
+
+.download-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download-btn {
+  background: #66c0f4;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 8px;
+  color: #000;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #8dd6ff;
+}
